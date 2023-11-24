@@ -6,14 +6,15 @@ import { CAMPSITES } from "../../app/shared/CAMPSITES";
 
 // 2. This line defines a new React functional component named CampsiteCard. A component is a reusable piece of code that describes a part of the user interface.
 
-const CampsiteCard = (props) => {
+const CampsiteCard = ({ campsite }) => {
+  const { image, name } = campsite;
   return (
     // 3. The return statement is what the component will render. In this case, it's returning a Card component. Think of it as saying, "When you use this CampsiteCard component, it will display a Card."
     <Card>
       <CardImg // 4. Inside the Card component, there's a CardImg component. This is like saying, "Inside the card, there's an image with a width of 100%, and the source (image) and alt text come from the properties (props) passed to this component."
         width="100%"
-        src={props.campsite.image}
-        alt={props.campsite.name}
+        src={campsite.image}
+        alt={campsite.name}
       />
       <CardImgOverlay>
         <CardTitle>{props.campsite.name}</CardTitle>
