@@ -17,7 +17,7 @@ const CampsiteCard = ({ campsite }) => {
         alt={campsite.name}
       />
       <CardImgOverlay>
-        <CardTitle>{props.campsite.name}</CardTitle>
+        <CardTitle>{campsite.name}</CardTitle>
       </CardImgOverlay>
     </Card>
   );
